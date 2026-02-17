@@ -1,0 +1,10 @@
+{
+  "name": "aircode-scene-builder",
+  "version": "1.0.0",
+  "description": "AirCode Scene Builder local app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
