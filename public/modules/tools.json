@@ -1,0 +1,96 @@
+{
+  "families": [
+    "Layout",
+    "Typography",
+    "Couleurs",
+    "Bordures & Effets",
+    "Comportement",
+    "Structure"
+  ],
+  "tools": [
+    {
+      "id": "layout-width",
+      "name": "Width",
+      "family": "Layout",
+      "type": "input",
+      "property": "width",
+      "defaultValue": "auto",
+      "unit": "",
+      "tooltip": "Ajuste la largeur de l’élément sélectionné"
+    },
+    {
+      "id": "layout-height",
+      "name": "Height",
+      "family": "Layout",
+      "type": "input",
+      "property": "height",
+      "defaultValue": "auto",
+      "unit": "",
+      "tooltip": "Ajuste la hauteur de l’élément sélectionné"
+    },
+    {
+      "id": "typography-size",
+      "name": "Font size",
+      "family": "Typography",
+      "type": "slider",
+      "property": "font-size",
+      "defaultValue": "16",
+      "unit": "px",
+      "min": 8,
+      "max": 96,
+      "tooltip": "Définit la taille de police"
+    },
+    {
+      "id": "color-bg",
+      "name": "Background",
+      "family": "Couleurs",
+      "type": "color",
+      "property": "background-color",
+      "defaultValue": "#ffffff",
+      "unit": "",
+      "tooltip": "Applique une couleur de fond"
+    },
+    {
+      "id": "effects-radius",
+      "name": "Radius",
+      "family": "Bordures & Effets",
+      "type": "slider",
+      "property": "border-radius",
+      "defaultValue": "0",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "tooltip": "Arrondit les coins"
+    },
+    {
+      "id": "behavior-transition",
+      "name": "Transition",
+      "family": "Comportement",
+      "type": "input",
+      "property": "transition",
+      "defaultValue": "all 0.2s ease",
+      "unit": "",
+      "tooltip": "Définit la transition CSS"
+    },
+    {
+      "id": "structure-add-child",
+      "name": "Ajouter enfant",
+      "family": "Structure",
+      "type": "script",
+      "action": "add-child",
+      "defaultValue": "div",
+      "unit": "",
+      "tooltip": "Ajoute un élément enfant"
+    },
+    {
+      "id": "structure-delete",
+      "name": "Supprimer",
+      "family": "Structure",
+      "type": "script",
+      "action": "delete-node",
+      "defaultValue": "",
+      "unit": "",
+      "tooltip": "Supprime l’élément sélectionné"
+    }
+  ]
+}

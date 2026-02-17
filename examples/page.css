@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; padding: 30px; }
+.card { width: 280px; padding: 20px; border-radius: 14px; background: #eef2ff; box-shadow: 0 10px 35px rgba(0,0,0,.1); }
+h1 { margin: 0 0 6px; font-size: 26px; }
+button { background: #4f46e5; color: white; border: none; border-radius: 8px; padding: 10px 14px; }

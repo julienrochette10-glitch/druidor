@@ -1,0 +1,27 @@
+:root { --bg:#111827; --panel:#1f2937; --line:#374151; --text:#f3f4f6; --accent:#22d3ee; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Inter, Arial, sans-serif; background:var(--bg); color:var(--text); height:100vh; display:flex; flex-direction:column; }
+.topbar { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; border-bottom:1px solid var(--line); }
+.actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+button, input, select { background:#0f172a; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:6px 8px; }
+.layout { display:grid; grid-template-columns:300px 1fr 340px; height:calc(100vh - 58px); }
+.panel { background:var(--panel); border-right:1px solid var(--line); overflow:auto; resize:horizontal; min-width:220px; }
+.panel.right { border-right:none; border-left:1px solid var(--line); resize:horizontal; }
+.panel h2 { margin:12px; font-size:1rem; }
+#inspectorTree { padding:8px 12px 24px; font-size:.9rem; }
+.tree-node { padding:4px 6px; border-radius:6px; cursor:pointer; margin-left:10px; }
+.tree-node.active { background:#155e75; }
+.sandbox-wrap { position:relative; overflow:hidden; background:#030712; }
+.sandbox-toolbar { position:absolute; top:10px; left:10px; z-index:20; display:flex; align-items:center; gap:8px; }
+#sandboxViewport { position:absolute; inset:0; overflow:hidden; }
+#sandboxFrame { width:100%; height:100%; border:0; background:white; transform-origin:0 0; }
+#selectionOverlay { position:absolute; border:2px solid var(--accent); pointer-events:none; display:none; z-index:10; }
+.grid-enabled::before { content:""; position:absolute; inset:0; background-image: linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.08) 1px, transparent 1px); background-size:20px 20px; pointer-events:none; z-index:2; }
+.wireframe #sandboxFrame { filter: grayscale(1) contrast(1.2); }
+.right-head { display:flex; justify-content:space-between; align-items:center; padding:12px; }
+.family-section { border-top:1px solid var(--line); padding:8px 12px; }
+.family-section h3 { margin:6px 0; font-size:.95rem; }
+.tool-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; align-items:center; margin:6px 0; }
+.context-menu { position:absolute; z-index:30; background:#0b1220; border:1px solid var(--line); border-radius:8px; padding:8px; display:flex; flex-direction:column; min-width:180px; }
+.context-menu.hidden { display:none; }
+#toolDialog form { display:grid; gap:8px; min-width:360px; }

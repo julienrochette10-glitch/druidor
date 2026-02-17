@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirCode Scene Builder</title>
+  <link rel="stylesheet" href="/styles/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>AirCode Scene Builder</h1>
+    <div class="actions">
+      <button id="loadBtn">Charger fichiers</button>
+      <button id="saveBtn">Sauvegarder</button>
+      <button id="undoBtn">Undo</button>
+      <button id="redoBtn">Redo</button>
+      <label><input type="checkbox" id="gridToggle"> Grille</label>
+      <label><input type="checkbox" id="wireToggle"> Wireframe</label>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel left" id="inspectorPanel">
+      <h2>Inspecteur DOM</h2>
+      <div id="inspectorTree"></div>
+    </aside>
+
+    <section class="sandbox-wrap">
+      <div class="sandbox-toolbar">
+        <button id="zoomOut">-</button>
+        <span id="zoomValue">100%</span>
+        <button id="zoomIn">+</button>
+      </div>
+      <div id="sandboxViewport">
+        <iframe id="sandboxFrame" title="Sandbox"></iframe>
+        <div id="selectionOverlay"></div>
+      </div>
+      <div id="contextMenu" class="context-menu hidden">
+        <button data-action="add-child">Ajouter élément</button>
+        <button data-action="inject-script">Ajouter script</button>
+        <button data-action="delete-node">Supprimer</button>
+        <button data-action="duplicate-node">Dupliquer</button>
+        <button data-action="lock-node">Verrouiller</button>
+        <button data-action="wrap-div">Envelopper dans div</button>
+      </div>
+    </section>
+
+    <aside class="panel right">
+      <div class="right-head">
+        <h2>Options</h2>
+        <button id="addToolBtn">+ Ajouter un outil</button>
+      </div>
+      <div id="toolPanel"></div>
+    </aside>
+  </main>
+
+  <dialog id="toolDialog">
+    <form id="toolForm" method="dialog">
+      <h3>Nouveau tool</h3>
+      <input name="name" placeholder="Nom" required />
+      <input name="family" placeholder="Famille cible" required />
+      <select name="type" required>
+        <option value="slider">slider</option>
+        <option value="toggle">toggle</option>
+        <option value="input">input</option>
+        <option value="color">color</option>
+        <option value="script">script</option>
+      </select>
+      <input name="property" placeholder="Propriété CSS ou action JS" required />
+      <input name="defaultValue" placeholder="Valeur défaut" />
+      <input name="unit" placeholder="Unité" />
+      <input name="tooltip" placeholder="Tooltip" />
+      <menu>
+        <button value="cancel">Annuler</button>
+        <button id="submitTool" value="default">Créer</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script type="module" src="/scripts/app.js"></script>
+</body>
+</html>
